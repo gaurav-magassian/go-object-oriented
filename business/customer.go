@@ -1,7 +1,7 @@
 package business
 
 import (
-	"../models"
+	"github.com/dhavlev/go-object-oriented/models"
 )
 
 // BuildOrder ...

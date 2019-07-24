@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"./business"
+	"github.com/dhavlev/go-object-oriented/business"
 )
 
 func main() {
