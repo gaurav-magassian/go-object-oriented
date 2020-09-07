@@ -1,10 +1,13 @@
----
 kind: pipeline
-type: docker
 name: default
 
+workspace:
+  base: /go
+  path: src/github.com/dhavlev/go-object-oriented
+
 steps:
-- name: greeting
-  image: golang:1.12
+- name: test
+  image: golang
   commands:
+  - go get
   - go build
