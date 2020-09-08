@@ -11,6 +11,9 @@ steps:
   commands:
   - go get
   - go build
+  when:
+    event:
+    - push
 
 - name: deploy
   image: mcr.microsoft.com/azure-cli
@@ -25,6 +28,4 @@ steps:
     NAMEVAR: Visharad
   when:
     event:
-    - promote
-    target:
-    - production
+    - tag
