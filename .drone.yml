@@ -13,9 +13,14 @@ steps:
   - go build
 
 - name: deploy
-  image: busybox
+  image: mcr.microsoft.com/azure-cli
   commands:
-    - echo "deploying to production"
+    - az acr repository show-tags  --name=reviowebhookregistry --username=${USERNAME} --password=${PASSWORD} --repository revio_webhook_receiver --output table
+  environment:
+    USERNAME:
+      from_secret: acr_username
+    PASSWORD:
+      from_secret: acr_password
   when:
     event:
     - promote
