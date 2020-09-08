@@ -16,7 +16,7 @@ steps:
   image: mcr.microsoft.com/azure-cli
   commands:
     - echo $NAMEVAR
-    - az acr repository show-tags --name=reviowebhookregistry --username=${USERNAME} --password=${PASSWORD} --repository revio_webhook_receiver --output table
+    - az acr repository show-tags --name=reviowebhookregistry --username=$USERNAME --password=$PASSWORD --repository revio_webhook_receiver --output table
   environment:
     USERNAME:
       from_secret: acr_username
