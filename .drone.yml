@@ -11,3 +11,13 @@ steps:
   commands:
   - go get
   - go build
+
+- name: deploy
+  image: busybox
+  commands:
+    - echo "deploying to production"
+  when:
+    event:
+    - promote
+    target:
+    - production
