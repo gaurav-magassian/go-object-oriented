@@ -18,5 +18,5 @@ local Pipeline(name, image) = {
 };
 
 [
-  Pipeline("build", "golang")
+  Pipeline("build", "golang"),
 ]
