@@ -17,5 +17,6 @@ local Pipeline(name, image) = {
   ]
 };
 
-Pipeline("build", "golang")
-#Pipeline("go-1-12", "golang:1.12"),
+[
+  Pipeline("build", "golang")
+]
