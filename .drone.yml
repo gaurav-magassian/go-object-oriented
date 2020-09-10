@@ -24,10 +24,10 @@ steps:
     password:
       from_secret: docker_password
     repo: dhavlev/drone
-    tags: latest
+    auto_tag: true
   when:
     event:
-    - push
+    - tag
 
 - name: deploy
   image: mcr.microsoft.com/azure-cli
