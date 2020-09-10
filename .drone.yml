@@ -15,6 +15,20 @@ steps:
     event:
     - push
 
+- name: docker
+  image: plugins/docker
+  settings:
+    dry_run: true
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: dhavlev/drone
+    tags: latest
+  when:
+    event:
+    - push
+
 - name: deploy
   image: mcr.microsoft.com/azure-cli
   commands:
