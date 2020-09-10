@@ -15,5 +15,5 @@ local Pipeline(name, image) = {
 
 [
   Pipeline("go-1-11", "golang:1.11"),
-  Pipeline("go-1-12", "golang:1.12"),
+  Pipeline("go-1-12", "golang:1.12"),  
 ]
